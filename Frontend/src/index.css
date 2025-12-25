@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --color-dark-950: #0a0a0b;
+  --color-dark-900: #111113;
+  --color-dark-800: #18181b;
+  --color-dark-700: #27272a;
+  --color-dark-600: #3f3f46;
+  --color-accent-400: #2dd4bf;
+  --color-accent-500: #14b8a6;
+  --color-accent-600: #0d9488;
+}
+
+/* Dark mode (default) */
+:root, .dark {
+  --bg-primary: #0a0a0b;
+  --bg-secondary: #18181b;
+  --bg-tertiary: #27272a;
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --border-color: #27272a;
+}
+
+/* Light mode */
+.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f4f5;
+  --bg-tertiary: #e4e4e7;
+  --text-primary: #18181b;
+  --text-secondary: #52525b;
+  --border-color: #e4e4e7;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light mode overrides */
+.light body,
+.light {
+  background-color: #ffffff;
+  color: #18181b;
+}
+
+.light .bg-zinc-950 { background-color: #ffffff !important; }
+.light .bg-zinc-900 { background-color: #f4f4f5 !important; }
+.light .bg-zinc-800 { background-color: #e4e4e7 !important; }
+.light .bg-zinc-800\/50 { background-color: rgba(228, 228, 231, 0.5) !important; }
+.light .text-white { color: #18181b !important; }
+.light .text-zinc-100 { color: #27272a !important; }
+.light .text-zinc-300 { color: #3f3f46 !important; }
+.light .text-zinc-400 { color: #52525b !important; }
+.light .text-zinc-500 { color: #71717a !important; }
+.light .text-zinc-600 { color: #a1a1aa !important; }
+.light .border-zinc-800 { border-color: #e4e4e7 !important; }
+.light .border-zinc-700 { border-color: #d4d4d8 !important; }
+.light .bg-zinc-950\/80 { background-color: rgba(255, 255, 255, 0.8) !important; }
+.light .hover\:bg-zinc-800:hover { background-color: #e4e4e7 !important; }
+.light .hover\:bg-zinc-800\/50:hover { background-color: rgba(228, 228, 231, 0.5) !important; }
+.light .hover\:text-white:hover { color: #18181b !important; }
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #18181b;
+}
+
+.light ::-webkit-scrollbar-track {
+  background: #f4f4f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 4px;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: #a1a1aa;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #71717a;
+}
