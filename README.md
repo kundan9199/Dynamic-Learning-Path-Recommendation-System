@@ -1,4 +1,4 @@
-# Dynamic Learning Path Recommendation System
+# Dynamic Learning Path Recommendation System | LearnPath
 
 A modern, full-stack learning management system with AI-powered course recommendations, built with React, Node.js, Express, and MongoDB.
 
